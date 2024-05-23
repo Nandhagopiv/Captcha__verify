@@ -60,11 +60,13 @@ verifybtn.addEventListener("click", function () {
 
     if (input.value === "") {
         alert("You should enter the captcha...")
-    } else if (refreshedcap === input.value) {
+    } else if (refreshedcap == input.value) {
         alert("You have entered correctly...")
+        console.log(refreshedcap,input.value);
         newarr = []
     } else {
         alert("You have entered wrong captcha...")
+        console.log(typeof(refreshedcap),typeof(input.value));
         newarr = []
     }
     refresh()
