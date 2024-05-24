@@ -6,8 +6,6 @@ let newarr = []
 const printing = (newarr) => {
     let [a, b, c, d, e, f] = newarr
 
-    console.log(a, b, c, d, e, f);
-
     captcha.textContent = a + b + c + d + e + f
 }
 
@@ -52,21 +50,15 @@ const refresh = () => {
 
 refresh()
 
-let [a, b, c, d, e, f] = newarr
-
 verifybtn.addEventListener("click", function () {
-
-    const refreshedcap = a + b + c + d + e + f
 
     if (input.value === "") {
         alert("You should enter the captcha...")
-    } else if (refreshedcap == input.value) {
+    } else if (captcha.textContent == input.value) {
         alert("You have entered correctly...")
-        console.log(refreshedcap,input.value);
         newarr = []
     } else {
         alert("You have entered wrong captcha...")
-        console.log(typeof(refreshedcap),typeof(input.value));
         newarr = []
     }
     refresh()
